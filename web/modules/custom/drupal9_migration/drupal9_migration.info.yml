@@ -1,0 +1,14 @@
+name: 'drupal9_migration'
+type: module
+description: 'Store migration from previous D7 website'
+core_version_requirement: ^8.8 || ^9
+package: drupal9
+dependencies:
+  - drupal:migrate_plus
+  - drupal:migrate_tools
+  - drupal:migrate
+  - drupal:migrate_drupal
+  - drupal:node
+  - drupal:taxonomy
+  - drupal:user
+  - drupal:file

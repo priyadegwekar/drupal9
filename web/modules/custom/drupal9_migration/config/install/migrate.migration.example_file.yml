@@ -1,0 +1,42 @@
+# id of the migration.
+id: example_file
+# Admin label of the migration
+label: Files
+# Migration group (explained at the end of the article, but equivalent of the D7 version)
+migration_group: example
+# Source configuration of the migration
+source:
+  # We use our custom plugin, the id here is defined in the class plugin annotation.
+  plugin: example_file
+  # SqlBase source parameter, tell the plugin to execute query against the 'db_migration' target
+  target: migrate
+# Process configuration, equivalent of field mapping in D7.
+process:
+# destination_field: source_field
+  # Map the filename
+  filename: name
+  # For the URI, we need our process plugin to copy and return the new file URI in the drupal file system.
+  uri:
+    plugin: example_file_uri
+    # source: $value passed to transform
+    # can be a list (array) or single source field.
+    source:
+      - filepath
+      - name
+  # Mapping
+  filemime: content_type
+  status: file_status
+  # Use our date process plugin.
+  changed: 
+    plugin: example_date
+    source: created_at
+  created: 
+    plugin: example_date
+    source: created_at
+  # Use the default_value plugin process for the uid destination field.
+  uid: 
+    plugin: default_value
+    default_value: 1
+# Use the file destination plugin.
+destination:
+  plugin: entity:file

@@ -1,0 +1,19 @@
+custom_rest_api.rest_api_get:
+  path: /api/get_data
+  defaults:
+    _controller: Drupal\custom_rest_api\Controller\MyRestController::getData
+  methods: ['GET']
+  requirements:
+    _user_is_logged_in: 'TRUE'
+  options:
+    _auth: ['basic_auth']
+
+custom_rest_api.rest_api_post:
+  path: /api/post_data
+  defaults:
+    _controller: Drupal\custom_rest_api\Controller\MyRestController::postData
+  methods: ['POST']
+  requirements:
+    _user_is_logged_in: 'TRUE'
+  options:
+    _auth: ['basic_auth']

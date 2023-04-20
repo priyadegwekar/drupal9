@@ -1,0 +1,35 @@
+<?php
+
+use Drupal\Core\Mail\MailManagerInterface;
+use Drupal\Component\Utility\SafeMarkup;
+use Drupal\Component\Utility\Html;
+
+/**
+* Implements hook_mail()
+* @param type $key
+* @param type $message
+* @param type $params
+*/
+function custom_queue_mail($key, &$message, $params) {
+switch ($key) {
+case 'query_mail':
+$body = "Hi ";
+
+$message['from'] = $params['from'];
+//dd($message['from']);
+$message['body'][] = Drupal\Core\Mail\MailFormatHelper::htmlToText($body);
+//dd($message['body']);
+// $message['headers'] = [
+//   'Reply-To' => 'noreplay@example.com',
+// ];
+break;
+}
+
+// switch ($key) {
+//     // Send a simple message from the contact form.
+//     case 'email_queue':
+//       $message['subject'] = SafeMarkup::checkPlain($params['subject']);
+//       $message['body'][] = SafeMarkup::checkPlain($params['message']);
+//       break;
+//   }
+}

@@ -1,0 +1,14 @@
+hello_world.content:
+  path: '/api/mail'
+  defaults:
+    _controller: '\Drupal\custom_queue\Controller\MailEntityController::sendEmail'
+    _title: 'Hello Mail'
+  requirements:
+    _permission: 'access content'
+email.queue:
+  path: '/api/form'
+  defaults:
+    _form: '\Drupal\custom_queue\Form\FormQueue'
+    _title: 'Hello Mail'
+  requirements:
+    _permission: 'access content'
