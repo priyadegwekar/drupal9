@@ -1,0 +1,12 @@
+administer custom entity types:
+  title: 'Administer custom entity types'
+  description: 'Maintain the types of custom entity entity.'
+  restrict access: false
+delete custom entity:
+  title: Delete custom entity
+create custom entity:
+  title: Create custom entity
+view custom entity:
+  title: View custom entity
+edit custom entity:
+  title: Edit custom entity
