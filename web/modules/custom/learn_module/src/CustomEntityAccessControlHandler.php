@@ -16,7 +16,7 @@ class CustomEntityAccessControlHandler extends EntityAccessControlHandler {
    * {@inheritdoc}
    */
   protected function checkAccess(EntityInterface $entity, $operation, AccountInterface $account) {
-
+    // dd($entity);
     switch ($operation) {
       case 'view':
         return AccessResult::allowedIfHasPermission($account, 'view custom entity');

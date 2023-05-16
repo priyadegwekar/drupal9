@@ -1,0 +1,7 @@
+new_module.new:
+  path: 'new'
+  defaults:
+    _controller: '\Drupal\new_module\Controller\NewController::new'
+    _title: 'New module'
+  requirements:
+    _permission: 'access content'

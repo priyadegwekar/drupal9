@@ -1,0 +1,9 @@
+<?php
+
+function custom_form_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
+    // dd($form);  
+}
+
+function custom_form_form_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['student_name']['#attributes']['class'][] = "my-custom-class";
+}

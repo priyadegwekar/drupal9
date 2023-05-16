@@ -21,14 +21,17 @@
         "drupal/core-project-message": "^9.5",
         "drupal/core-recommended": "^9.5",
         "drupal/devel": "^5.1",
+        "drupal/devel_kint_extras": "^1.1",
         "drupal/maillog": "^1.0",
         "drupal/migrate_plus": "^6.0",
         "drupal/migrate_tools": "^6.0",
         "drupal/migrate_upgrade": "^4.0",
+        "drupal/multiple_fields_remove_button": "^2.2",
         "drupal/phpmailer_smtp": "^2.2",
         "drupal/queue_ui": "^3.1",
         "drupal/restui": "^1.21",
-        "drush/drush": "^11.5"
+        "drush/drush": "^11.5",
+        "mpdf/mpdf": "^8.0"
     },
     "conflict": {
         "drupal/drupal": "*"
